@@ -9,7 +9,15 @@
 <body>
 
   <header>
-    🚀 STEVE'S AWESOME WORLD! 🦖🎮
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1200px;margin:0 auto;width:100%;">
+      <div style="text-align:left;">
+        🚀 <strong>STEVE'S AWESOME WORLD!</strong> 🦖🎮
+      </div>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <button id="motionToggle" onclick="toggleMotion()" aria-pressed="false" title="Reduce or restore motion">Reduce motion</button>
+        <a href="#home" style="color:inherit;text-decoration:none;" aria-hidden="true">Skip</a>
+      </div>
+    </div>
   </header>
 
   <nav class="nav">
@@ -21,34 +29,32 @@
 
   <section id="home" class="hero">
     <h1>YO STEVE! 👋 Ready to have EPIC fun?</h1>
-    <p>Welcome to the coolest website made just for you, bro!Made by your big sister Stephanie lots of love</p>
+    <p>Welcome to the coolest website made just for you, bro! Made by your big sister Stephanie — lots of love ❤️</p>
     <button onclick="alert('BOOM! SUPER STEVE MODE ACTIVATED! 🔥')">Activate Super Power!</button>
   </section>
 
-  <!-- NEW GAMES SECTION -->
+  <!-- GAMES SECTION -->
   <section id="games">
     <h2>🎮 STEVE'S ULTIMATE GAME ZONE</h2>
-    <p>Click any button to launch the game in a new tab. All safe & super fun for 12-year-olds!</p>
+    <p>Click any button to launch the game in a new tab. All safe & super fun for 12–13‑year‑olds!</p>
     
     <div class="game-grid">
-      <a href="https://www.minecraft.net/en-us/play" target="_blank" class="game-btn">⛏️ Minecraft Classic (Free!)</a>
-      <a href="https://kids.crazygames.com/" target="_blank" class="game-btn">🏎️ CrazyGames Kids (Racing, Action & More)</a>
-      <a href="https://kids.poki.com/" target="_blank" class="game-btn">🚀 Poki Kids (Huge collection)</a>
-      <a href="https://www.coolmathgames.com/" target="_blank" class="game-btn">🧠 Coolmath Games (Strategy + Fun)</a>
-      <a href="https://www.safekidgames.com/" target="_blank" class="game-btn">🛡️ Safe Kid Games (All safe & clean)</a>
-      <a href="https://www.nick.com/games/all-games" target="_blank" class="game-btn">🧽 Nickelodeon Games (SpongeBob, Loud House...)</a>
-      <a href="https://beinternetawesome.withgoogle.com/en_us/interland" target="_blank" class="game-btn">🌐 Google Interland (Fun + Learn Internet Safety)</a>
-      <a href="https://kids.nationalgeographic.com/games" target="_blank" class="game-btn">🌍 Nat Geo Kids Games (Adventure & Animals)</a>
-      <a href="https://www.funbrain.com/games" target="_blank" class="game-btn">📚 Funbrain Games (Math, Reading & More)</a>
+      <a href="https://www.minecraft.net/en-us/play" target="_blank" rel="noopener noreferrer" class="game-btn">⛏️ Minecraft Classic (Free!)</a>
+      <a href="https://kids.crazygames.com/" target="_blank" rel="noopener noreferrer" class="game-btn">🏎️ CrazyGames Kids (Racing, Action & More)</a>
+      <a href="https://kids.poki.com/" target="_blank" rel="noopener noreferrer" class="game-btn">🚀 Poki Kids (Huge collection)</a>
+      <a href="https://www.coolmathgames.com/" target="_blank" rel="noopener noreferrer" class="game-btn">🧠 Coolmath Games (Strategy + Fun)</a>
+      <a href="https://www.safekidgames.com/" target="_blank" rel="noopener noreferrer" class="game-btn">🛡️ Safe Kid Games (All safe & clean)</a>
+      <a href="https://www.nick.com/games/all-games" target="_blank" rel="noopener noreferrer" class="game-btn">🧽 Nickelodeon Games (SpongeBob, Loud House...)</a>
+      <a href="https://beinternetawesome.withgoogle.com/en_us/interland" target="_blank" rel="noopener noreferrer" class="game-btn">🌐 Google Interland (Fun + Learn Internet Safety)</a>
+      <a href="https://kids.nationalgeographic.com/games" target="_blank" rel="noopener noreferrer" class="game-btn">🌍 Nat Geo Kids Games (Adventure & Animals)</a>
+      <a href="https://www.funbrain.com/games" target="_blank" rel="noopener noreferrer" class="game-btn">📚 Funbrain Games (Math, Reading & More)</a>
     </div>
 
-    
   </section>
 
   <section id="jokes">
     <h2>😂 Daily Steve Jokes</h2>
-    <p id="joke" class="joke-text">Why was the math book sad?It had many problems</p>
-    <p id="joke"class="joke-text">What do you call fake spaghetti?An Impasta</p>
+    <p id="joke" class="joke-text" role="status" aria-live="polite">Why was the math book sad? It had too many problems.</p>
     <button onclick="newJoke()">New Joke!</button>
   </section>
 
@@ -56,27 +62,27 @@
     <h2>📸 Steve's Epic Gallery</h2>
     <div class="gallery">
       <div class="photo-card">
-        <img src="Steve(4).webp" alt="Steve looking cool">
+        <img src="Steve(4).webp" srcset="Steve(4).webp 600w" sizes="(max-width:600px) 100vw, 320px" loading="lazy" alt="Steve looking cool">
         <p>Steve chilling 😎</p>
       </div>
       <div class="photo-card">
-        <img src="Steve(1).webp" alt="Family in the field">
+        <img src="Steve(1).webp" srcset="Steve(1).webp 600w" sizes="(max-width:600px) 100vw, 320px" loading="lazy" alt="Family in the field">
         <p>Family adventure 🌾</p>
       </div>
       <div class="photo-card">
-        <img src="Steve (5).webp" alt="Steve smiling in the house">
+        <img src="Steve (5).webp" srcset="Steve (5).webp 600w" sizes="(max-width:600px) 100vw, 320px" loading="lazy" alt="Steve smiling in the house">
         <p>Happy Steve at home 🏠</p>
       </div>
       <div class="photo-card">
-        <img src="Steve (7).webp" alt="Steve with big sis">
+        <img src="Steve (7).webp" srcset="Steve (7).webp 800w" sizes="(max-width:800px) 100vw, 320px" loading="lazy" alt="Steve with big sis">
         <p>Selfie with Sis ❤️</p>
       </div>
       <div class="photo-card">
-        <img src="Steve (6).webp" alt="Steve in Grinch shirt">
+        <img src="Steve (6).webp" srcset="Steve (6).webp 600w" sizes="(max-width:600px) 100vw, 320px" loading="lazy" alt="Steve in Grinch shirt">
         <p>Grinch Steve 🎄</p>
       </div>
       <div class="photo-card">
-        <img src="Steve(2).webp" alt="Steve drinking coconut">
+        <img src="Steve(2).webp" srcset="Steve(2).webp 600w" sizes="(max-width:600px) 100vw, 320px" loading="lazy" alt="Steve drinking coconut">
         <p>Coconut time at night 🥥</p>
       </div>
     </div>
@@ -88,6 +94,7 @@
   </footer>
 
   <script>
+    // Jokes array
     const jokes = [
       "Why don't skeletons fight each other? They don't have the guts! 💀",
       "What do you call a dinosaur that crashes his car? Tyrannosaurus Wrecks! 🦖",
@@ -99,8 +106,27 @@
 
     function newJoke() {
       const random = Math.floor(Math.random() * jokes.length);
-      document.getElementById("joke").innerHTML = jokes[random];
+      const el = document.getElementById("joke");
+      if (el) el.textContent = jokes[random];
     }
+
+    // Motion toggle (persists in localStorage)
+    function toggleMotion() {
+      const isReduced = document.body.classList.toggle('reduced-motion');
+      document.getElementById('motionToggle').setAttribute('aria-pressed', isReduced);
+      document.getElementById('motionToggle').textContent = isReduced ? 'Restore motion' : 'Reduce motion';
+      localStorage.setItem('reducedMotion', isReduced ? '1' : '0');
+    }
+
+    // Initialize motion preference
+    (function() {
+      const pref = localStorage.getItem('reducedMotion');
+      if (pref === '1') {
+        document.body.classList.add('reduced-motion');
+        document.getElementById('motionToggle').setAttribute('aria-pressed', 'true');
+        document.getElementById('motionToggle').textContent = 'Restore motion';
+      }
+    })();
   </script>
 
 </body>
