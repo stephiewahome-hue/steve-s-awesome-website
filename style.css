@@ -1,4 +1,22 @@
-/* ====================== STEVE'S AWESOME WORLD - DARKER THEME CSS ====================== */
+/* ====================== STEVE'S AWESOME WORLD - THEME VARIABLES + FONT ====================== */
+
+:root{
+  --bg-start: #0b0f1a;
+  --bg-mid: #081229;
+  --bg-end: #1a1330;
+  --card-bg: rgba(12,16,22,0.85);
+  --muted-text: #eaf2ff;
+  --accent: #ffd600;
+  --accent-2: #ff7bd0;
+  --button-bg: linear-gradient(45deg, #2b2b5f, #5b2b6f);
+  --button-text: #ffffff;
+  --shadow: rgba(0,0,0,0.7);
+  --glass: rgba(255,255,255,0.02);
+  --rounded: 14px;
+}
+
+/* Import kid-friendly webfont */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap');
 
 * {
   margin: 0;
@@ -7,12 +25,11 @@
 }
 
 body {
-  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
-  /* darker, cooler gradient */
-  background: linear-gradient(135deg, #0b0f1a 0%, #081229 30%, #1a1330 60%, #081229 100%);
+  font-family: 'Baloo 2', 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+  background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 30%, var(--bg-end) 60%, var(--bg-mid) 100%);
   background-size: 400% 400%;
   animation: slow-bg 20s ease infinite;
-  color: #f5f7fb;
+  color: var(--muted-text);
   text-align: center;
   line-height: 1.4;
   overflow-x: hidden;
@@ -62,10 +79,10 @@ header::after {
 }
 
 .nav a {
-  color: #e8eef8;
+  color: var(--muted-text);
   text-decoration: none;
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: 700;
   padding: 10px 20px;
   border-radius: 40px;
   transition: all 0.25s;
@@ -73,17 +90,17 @@ header::after {
 }
 
 .nav a:hover {
-  background: #ffd600;
+  background: var(--accent);
   color: #000;
   transform: scale(1.05) rotate(1deg);
-  border-color: #ff7bd0;
+  border-color: var(--accent-2);
   box-shadow: 0 0 12px rgba(255,214,0,0.35);
 }
 
 .hero {
   padding: 80px 20px;
   font-size: 2.4rem;
-  color: #eaf2ff;
+  color: var(--muted-text);
   text-shadow: 4px 4px 0 rgba(0,0,0,0.6);
   animation: subtle-pulse 3.5s ease infinite;
 }
@@ -98,9 +115,8 @@ section {
   margin: 24px auto;
   max-width: 1100px;
   border-radius: 20px;
-  /* darker card look */
-  background: rgba(12,16,22,0.85);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  background: var(--card-bg);
+  box-shadow: 0 12px 30px var(--shadow);
   border: 1px solid rgba(255,255,255,0.03);
 }
 
@@ -115,10 +131,9 @@ section {
 
 .game-btn {
   display: block;
-  /* darker neon gradient */
-  background: linear-gradient(45deg, #2b2b5f, #5b2b6f);
+  background: var(--button-bg);
   background-size: 200%;
-  color: #ffffff;
+  color: var(--button-text);
   font-size: 1.6rem;
   font-weight: 800;
   padding: 20px 18px;
@@ -145,8 +160,8 @@ section {
 }
 
 .photo-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius: 14px;
+  background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.01));
+  border-radius: var(--rounded);
   padding: 12px;
   width: 300px;
   box-shadow: 0 12px 36px rgba(0,0,0,0.7);
@@ -184,7 +199,7 @@ section {
   font-size: 1.8rem;
   min-height: 120px;
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  color: #ffd600;
+  color: var(--accent);
   padding: 28px 20px;
   border-radius: 18px;
   margin: 20px auto;
@@ -195,7 +210,7 @@ section {
 /* Buttons */
 button {
   background: linear-gradient(#222, #111);
-  color: #ffd600;
+  color: var(--accent);
   border: 2px solid rgba(255,214,0,0.12);
   padding: 14px 28px;
   font-size: 1.6rem;
